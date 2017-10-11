@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			position: relative;
+		}
+		.btn1{
+			width: 80px;
+			height: 30px;
+			background-color: orange;
+			line-height: 30px;
+			color: white;
+			text-align: center;
+		}
+		.mengban{
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(0,0,8,0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+		.tan{
+			width: 70%;
+			position: absolute;
+			left: 10%;
+			top: 300px;
+			margin: 0 auto;
+			z-index: 5;
+			margin: 0 auto;
+			display: none;
+		}
+		.shang{
+			width: 100%;
+			height: 30px;
+			color: white;
+			line-height: 30px;
+			background-color: orange;
+		}
+		.zhong{
+			width: 100%;
+			height: 200px;
+			background-color: white;
+		}
+		.zhong h2{
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		.zhong p{
+			text-align: center;
+		}
+		.left{
+			float: left;
+
+		}
+		.right{
+			float: right;
+			padding-right: 10px;
+			color: black;
+		}
+		.xia{
+			width: 100%;
+			height: 40px;
+			background-color: orange;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="btn1">弹弹弹</div>
+		<div class="mengban"></div>
+		<div class="tan">
+			<div class="shang">
+				<span class="left">弹窗头部</span>
+				<span class="right">X</span>
+			</div>
+			<div class="zhong">
+				<h2>这是一个弹窗</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ullam, blanditiis, quos corrupti voluptate minus vero alias, atque velit et aspernatur, ratione distinctio. Corporis, ex perferendis. Nisi, doloribus. Quis, harum.</p>
+			</div>
+			<div class="xia">
+				<span>弹窗底部</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var btn1=document.getElementsByClassName('btn1')[0];
+	var mengban=document.getElementsByClassName('mengban')[0];
+	var tan=document.getElementsByClassName('tan')[0];
+	var right=document.getElementsByClassName('right')[0];
+	btn1.onclick=function(){
+		mengban.style.display='block';
+		tan.style.display='block';
+	}
+	mengban.onclick=function(){
+		mengban.style.display='none';
+		tan.style.display='none';
+	}
+	right.onclick=function(){
+		mengban.style.display='none';
+		tan.style.display='none';
+	}
+</script>
+</html>
